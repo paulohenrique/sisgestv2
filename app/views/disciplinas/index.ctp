@@ -46,12 +46,14 @@
 		</td>
 		-->
 		<td>
+		 <?php if($grupo == 1): ?>
+
 			<?php echo $this->Html->link(
 				$this->Html->image('edit.ico',array('alt'=> __('Editar pessoas', true),'title'=>'editar', 'border' => '0')),array('action'=>'edit', $disciplina['Disciplina']['id']),array('target' => '_self', 'escape' => false)); ?>
 
 			<?php echo $this->Html->link(
 				$this->Html->image('del_btn.png',array('alt'=> __('Deletar pessoas', true),'title'=>'excluir', 'border' => '0')),array('action'=>'delete', $disciplina['Disciplina']['id']),array('target' => '_self', 'escape' => false), sprintf(__('Você tem certeza que deseja apagar essa pessoa?', true), $disciplina['Disciplina']['id'])); ?>
-		     												
+		    <?php endif; ?> 												
 		</td>
 	</tr>
 <?php endforeach; ?>

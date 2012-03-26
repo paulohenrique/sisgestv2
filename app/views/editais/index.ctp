@@ -42,6 +42,7 @@
 					</td>
 					-->
 					<td>
+					<?php if($grupo == 1): ?>
 					    
 					    <?php echo $this->Html->link(
 									$this->Html->image('lupa.ico',array('alt'=> __('Visualizar pessoas', true),'title'=>'visualizar', 'border' => '0')),array('action'=>'view', $edital['Edital']['id']),array('target' => '_self', 'escape' => false)); ?>
@@ -54,6 +55,7 @@
 							
 						<?php echo $this->Html->link(
 							$this->Html->image('paper.ico',array('alt'=> __('Vagas', true),'title'=>'vagas', 'border' => '0')),array('action'=>'add','controller'=>'vagas', $edital['Edital']['id']),array('target' => '_self', 'escape' => false)); ?>
+					<?php endif; ?>		
 					     												
 					</td>
 				</tr>

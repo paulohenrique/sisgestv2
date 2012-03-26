@@ -6,7 +6,8 @@ class DisciplinasController extends AppController {
 	var $uses = array("Disciplina","Turma" );
 	
 	function index() {
-		$this->Disciplina->recursive = 0;
+		$this->Disciplina->recursive = 2;
+		$this->set('grupo', $this->Auth->user("group_id"));
 		$this->set('disciplinas', $this->paginate());
 	}
 

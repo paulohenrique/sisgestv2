@@ -20,9 +20,11 @@
 		<td><?php echo $usuario['Usuario']['nome']; ?>&nbsp;</td>
 		<td><?php echo $usuario['Usuario']['sobrenome']; ?>&nbsp;</td>
 		<td class="actions">
+
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $usuario['Usuario']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $usuario['Usuario']['id'])); ?>
 			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $usuario['Usuario']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $usuario['Usuario']['id'])); ?>
+
 		</td>
 	</tr>
 <?php endforeach; ?>

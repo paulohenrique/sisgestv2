@@ -33,12 +33,21 @@
 						<?php echo $this->Html->link(__('Apagar', true), array('action' => 'delete', $curso['Curso']['id']), null, sprintf(__('Você tem certeza que deseja apagar este curso?', true), $curso['Curso']['id'])); ?>
 					</td>
 					-->
+					
 					<td>
+                    <!-- 
+                         ====================================================================
+					      verifica se o usuario logado é o admin se nao for esconde as ações 
+                         ====================================================================
+					-->
+
+					<?php if($grupo == 1): ?> 
 						<?php echo $this->Html->link(
 							$this->Html->image('edit.ico',array('alt'=> __('Visualizar pessoas', true),'title'=>'editar', 'border' => '0')),array('action'=>'edit', $curso['Curso']['id']),array('target' => '_self', 'escape' => false)); ?>
 
 						<?php echo $this->Html->link(
 							$this->Html->image('del_btn.png',array('alt'=> __('Deletar pessoas', true),'title'=>'excluir', 'border' => '0')),array('action'=>'delete', $curso['Curso']['id']),array('target' => '_self', 'escape' => false), sprintf(__('Você tem certeza que deseja apagar essa pessoa?', true), $curso['Curso']['id'])); ?>
+					<?php endif; ?>		
 					     												
 					</td> 
 				</tr>

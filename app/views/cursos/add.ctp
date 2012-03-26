@@ -35,7 +35,9 @@
 						<?php
 							echo $this->Form->input('nome',array("class" => "validate[required]"));
 						?>
-					<p><?php echo $this->Form->end(__('Adicionar', true));?></p>
+						
+					<p><?php  echo $this->Form->end(__('Adicionar', true));?></p>
+					    
 				</div>
 			</div>
 		</div>

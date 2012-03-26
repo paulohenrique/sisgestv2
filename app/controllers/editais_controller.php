@@ -6,6 +6,9 @@ class EditaisController extends AppController {
 	var $uses = array("Edital", "Curso", "Disciplina");
 	
 	function index() {
+		//envia o id do grupo do usuario logado para a view
+		$this->set('grupo', $this->Auth->user("group_id"));
+		//
 		$this->Edital->recursive = 0;
 		$this->set('editais', $this->paginate());
 	}

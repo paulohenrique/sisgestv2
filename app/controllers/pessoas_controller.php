@@ -13,6 +13,10 @@ class PessoasController extends AppController {
 	}
 	
 	function index() {
+		//verifica o grupo do usuario logado
+		$this->set('grupo', $this->Auth->user("group_id"));
+		//
+
 		$this->Pessoa->recursive = 2;
 		$pessoas = $this->Pessoa->find("all");
 		$this->set("pessoas",$pessoas);	

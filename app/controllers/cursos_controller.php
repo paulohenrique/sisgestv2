@@ -5,7 +5,11 @@ class CursosController extends AppController {
 	var $helpers = array("Javascript");
 
 	function index() {
-		$this->Curso->recursive = 0;
+		//esconder as ações
+        $this->Turma->recursive = 2;
+		$this->set('grupo', $this->Auth->user("group_id"));
+		// fim
+		$this->Curso->recursive = 2;
 		$this->set('cursos', $this->paginate());
 	}
 
@@ -18,6 +22,10 @@ class CursosController extends AppController {
 	}
 
 	function add() {
+         //envia o grupo ao qual o usuario pertence para view
+         
+		 $this->set('grupo', $this->Auth->user("group_id"));
+
 		if (!empty($this->data)) {
 			$this->Curso->create();
 			if ($this->Curso->save($this->data)) {

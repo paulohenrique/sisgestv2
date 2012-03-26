@@ -23,6 +23,9 @@ class UsersController extends AppController {
 	 }
 	
 	function index() {
+		//verifica o id do ususario logado
+		$this->set('grupo', $this->Auth->user("group_id"));
+		//
 		$this->User->recursive = 2;
 		$this->set('users', $this->paginate());
 	}

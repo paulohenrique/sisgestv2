@@ -4,7 +4,10 @@ class PolosController extends AppController {
 	var $name = 'Polos';
 	var $helpers = array('Javascript');
 	function index() {
-		$this->Polo->recursive = 0;
+		$this->Polo->recursive = 2;
+		//envia o id do  grupo do usuario logado para a view
+		$this->set('grupo', $this->Auth->user("group_id"));
+		//
 		$this->set('polos', $this->paginate());
 	}
 
