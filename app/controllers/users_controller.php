@@ -9,6 +9,7 @@ class UsersController extends AppController {
     	parent::beforeFilter();
 		//$this->Auth->allow("add");
 		$this->Auth->allow('login','logout');
+		//$this->Auth->allowedActions = array('*');
 
 	}	
 	
@@ -108,8 +109,8 @@ class UsersController extends AppController {
 		    $this->Acl->allow($group, 'controllers');
 		    $this->Acl->deny($group, 'controllers/Users');
 
-		    $group->id = 3;
-		    $this->Acl->allow($group, 'controllers');
+		    //$group->id = 3;
+		    //$this->Acl->allow($group, 'controllers');
 		    
 		    
 		    // nós adcionamos um exit para evitar que seja exibido o erro de missing views

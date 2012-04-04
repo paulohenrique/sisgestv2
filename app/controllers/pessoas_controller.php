@@ -277,6 +277,10 @@ class PessoasController extends AppController {
 	}
 */
 
+
+        
+
+         
 		function export_xls()
 		{
 			if(!empty($this->data)) {
@@ -292,6 +296,8 @@ class PessoasController extends AppController {
 
 			$this->render('preparar_xls');
 		}
+
+		
 	
 }	
 	

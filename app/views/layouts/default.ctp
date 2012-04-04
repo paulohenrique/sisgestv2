@@ -28,6 +28,14 @@
 							</li>
 						</ul>
 					</li>
+					<li><a href="#">Vínculos</a>
+						<ul>
+							<li><a href="<?php echo Dispatcher::baseUrl();?>/vinculos/index/">Mostrar</a>			
+							</li>
+							<li><a href="<?php echo Dispatcher::baseUrl();?>/vinculos/add/">Adicionar</a></li>
+							</li>
+						</ul>
+					</li>
 					<li><a href="#">Turmas</a>
 						<ul>
 							<li><a href="<?php echo Dispatcher::baseUrl();?>/turmas/index/">Mostrar</a></li>

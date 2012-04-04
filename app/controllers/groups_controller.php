@@ -3,6 +3,14 @@ class GroupsController extends AppController {
  
     var $name = 'Groups';
     var $helpers = array('Html', 'Form');
+
+    /*function beforeFilter() {
+        parent::beforeFilter();
+        //$this->Auth->allow("add");
+        //$this->Auth->allow('login','logout');
+        $this->Auth->allowedActions = array('*');
+
+    } */  
  
     function index() {
         $this->Group->recursive = 0;
